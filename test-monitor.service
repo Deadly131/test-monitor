@@ -1,0 +1,11 @@
+[Unit]
+Description=Generic monitoring daemon
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/test-monitor.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
